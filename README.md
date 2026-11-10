@@ -6,7 +6,8 @@ O passo a passo completo está no post **[Anexos com arrastar e soltar no formul
 
 ![Card de anexo recebendo um PDF](preview.gif)
 
-## O que este 
+## O que este
+
 - Usa o [FilePond](https://pqina.nl/filepond/) só como área de arrastar e soltar. Ele não faz upload.
 - Valida a extensão (PDF, JPG, PNG) e o tamanho do arquivo antes de anexar.
 - Coloca o arquivo no campo de upload da tela da solicitação e dispara o `change`. O Fluig faz o upload e o arquivo aparece na aba Anexos.
@@ -31,7 +32,10 @@ Fluig-Anexos-FilePond/
 1. Copie o bloco `cardAnexo` do `index.html` para o HTML do seu formulário.
 2. Adicione as bibliotecas no formulário:
    ```html
-   <link rel="stylesheet" href="https://unpkg.com/filepond@4.30.6/dist/filepond.min.css">
+   <link
+     rel="stylesheet"
+     href="https://unpkg.com/filepond@4.30.6/dist/filepond.min.css"
+   />
    <script src="https://unpkg.com/filepond@4.30.6/dist/filepond.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
    ```
@@ -44,21 +48,21 @@ Fluig-Anexos-FilePond/
 
 No começo do `anexos.js`:
 
-| Constante | Padrão | O que faz |
-| --- | --- | --- |
-| `EXTENSOES` | `.pdf`, `.jpg`, `.jpeg`, `.png` | Tipos aceitos |
-| `MAX_KB` | `2048` | Tamanho máximo, em KB |
-| `PAGINAS_NA_PREVIA` | `2` | Quantas páginas do PDF aparecem no card |
+| Constante           | Padrão                          | O que faz                               |
+| ------------------- | ------------------------------- | --------------------------------------- |
+| `EXTENSOES`         | `.pdf`, `.jpg`, `.jpeg`, `.png` | Tipos aceitos                           |
+| `MAX_KB`            | `2048`                          | Tamanho máximo, em KB                   |
+| `PAGINAS_NA_PREVIA` | `2`                             | Quantas páginas do PDF aparecem no card |
 
 Para ter mais de um card no mesmo formulário, repita o bloco com outros `id` e chame `Anexo.criar` para cada um:
 
 ```js
 Anexo.criar({
-    card: '.cardCertificado',
-    input: '.certificado-pond',
-    previa: '#previaCertificado',
-    nome: '#nomeCertificado',
-    remover: '#removerCertificado'
+  card: ".cardCertificado",
+  input: ".certificado-pond",
+  previa: "#previaCertificado",
+  nome: "#nomeCertificado",
+  remover: "#removerCertificado",
 });
 ```
 
