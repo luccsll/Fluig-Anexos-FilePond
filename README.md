@@ -4,11 +4,11 @@ Card de anexo com **arrastar e soltar** para formulários do Fluig. O documento 
 
 O passo a passo completo está no post **[Anexos com arrastar e soltar no formulário do Fluig, com FilePond](https://lucaslima.dev/blog/fluig-anexos-filepond)**, no lucaslima.dev.
 
-![Card de anexo recebendo um PDF](preview.gif)
+![Card de anexo recebendo um PDF](Preview.gif)
 
 ## O que este
 
-- Usa o [FilePond](https://pqina.nl/filepond/) só como área de arrastar e soltar. Ele não faz upload.
+- Usa o [FilePond](https://pqina.nl/filepond) só como área de arrastar e soltar. Ele não faz upload.
 - Valida a extensão (PDF, JPG, PNG) e o tamanho do arquivo antes de anexar.
 - Coloca o arquivo no campo de upload da tela da solicitação e dispara o `change`. O Fluig faz o upload e o arquivo aparece na aba Anexos.
 - Mostra o documento no card: imagem direto e PDF renderizado pelo [pdf.js](https://mozilla.github.io/pdf.js/), até 2 páginas.
