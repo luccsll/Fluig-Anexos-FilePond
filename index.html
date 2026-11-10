@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solicitação de Viagem · Anexo com FilePond</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/filepond@4.30.6/dist/filepond.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form name="form" class="formulario">
+      <h1>Solicitação de Viagem</h1>
+
+      <label class="campo">
+        <span>Destino</span>
+        <input type="text" name="destino" value="Cuiabá, MT" />
+      </label>
+
+      <!-- CARD DE ANEXO -->
+      <div class="cardAnexo">
+        <div class="cardAnexoTopo">
+          <label class="cardAnexoTitulo">Comprovante da passagem</label>
+          <button
+            type="button"
+            class="anexoRemover"
+            id="removerAnexo"
+            aria-label="Remover anexo"
+          >
+            Remover
+          </button>
+        </div>
+
+        <!-- O FilePond transforma este input na área de arrastar e soltar -->
+        <div class="anexoArea" id="areaAnexo">
+          <input type="file" class="anexo-pond" />
+        </div>
+
+        <!-- Prévia do documento: imagem ou páginas do PDF -->
+        <div class="anexoPrevia" id="previaAnexo"></div>
+
+        <div class="campo anexoNome" id="campoNomeAnexo">
+          <span>Nome do arquivo</span>
+          <input type="text" name="nomeAnexo" id="nomeAnexo" readonly />
+        </div>
+        <small class="anexoDica">PDF, JPG ou PNG · até 2 MB</small>
+      </div>
+    </form>
+
+    <!-- No Fluig, o formulário já carrega o jQuery: esta linha é só para testar fora dele -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/filepond@4.30.6/dist/filepond.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
