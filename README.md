@@ -4,7 +4,7 @@ Card de anexo com **arrastar e soltar** para formulários do Fluig. O documento 
 
 O passo a passo completo está no post **[Anexos com arrastar e soltar no formulário do Fluig, com FilePond](https://lucaslima.dev/blog/fluig-anexos-filepond)**, no lucaslima.dev.
 
-![Card de anexo recebendo um PDF](Preview.gif)
+![Card de anexo recebendo um PDF](preview.gif)
 
 ## O que este
 
